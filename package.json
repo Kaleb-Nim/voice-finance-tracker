@@ -3,22 +3,32 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
+    "dev": "node scripts/check-env.js && next dev --turbopack",
+    "build": "node scripts/check-env.js && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check-env": "node scripts/check-env.js"
   },
   "dependencies": {
+    "@deepgram/sdk": "^4.4.0",
+    "@supabase/supabase-js": "^2.50.0",
+    "@tanstack/react-query": "^5.80.7",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.18.1",
+    "lucide-react": "^0.516.0",
+    "next": "15.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.3.3"
+    "tailwind-merge": "^3.3.1",
+    "zustand": "^5.0.5"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4"
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
